@@ -17,7 +17,7 @@ const NEXT_CHIP: Record<string, TeamColor | null> = {
 };
 
 export const Board=(props:BoardProps)=>{
-    const{highlightedCells=[], onSelectCell}=props
+    const{highlightedCells=[]}=props
     const [cells, setCells] = useState<BoardState>(()=> BOARD_LAYOUT.map((cardCode, index) => ({
         index,
         cardCode,

@@ -1,12 +1,12 @@
 .chipParent {
   position: relative;
-  width: 1rem;      
-  height: 1rem;
+  width: 1.25em;      
+  height: 1.25em;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px;      
+  padding: 1px;   
   
   /* Modern casino physical depth shadows */
   box-shadow: 
@@ -47,8 +47,8 @@ Micro Interactivity Taps
 
 /* Casino Dashed Ring Element */
 .dashedRing {
-  width: .75rem;
-  height: .75rem;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
   border: 1.5px dashed rgba(255, 255, 255, 0.45);
   display: flex;
@@ -58,8 +58,8 @@ Micro Interactivity Taps
 
 /* Core Center Point */
 .centerDot {
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 40%;
+  height: 40%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.25);
 }

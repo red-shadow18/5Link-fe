@@ -1,0 +1,27 @@
+.desktopWrapper{
+
+    .mobileFrame{
+
+        .header{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+            font-size: 0.875rem !important;
+
+            .coinsContainer{
+                display: inline-flex;
+                margin-right:.45rem;
+                &>div{
+                    margin-inline-end: -0.45rem; 
+                }
+            }
+            .suitesGraphicContainer{
+                display: inline-flex;
+                align-items: center;
+                gap: 0.125rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

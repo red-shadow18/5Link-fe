@@ -1,0 +1,14 @@
+html, body {
+  /* Prevent double-tap zoom and gesture zooming while preserving standard scrolling */
+  touch-action: pan-x pan-y;
+  
+  /* Disable accidental text selection on taps/swipes */
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* Prevent overscroll bounce (rubber-banding) from pulling the frame */
+  overscroll-behavior: none;
+
+  /* Remove tap highlight tint on mobile WebKit/Chrome */
+  -webkit-tap-highlight-color: transparent;
+}

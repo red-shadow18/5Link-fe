@@ -25,7 +25,7 @@
   }
 
         .header{
-            padding:0.5rem 0;
+            padding:0.25rem 0;
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -35,10 +35,10 @@
 
             .coinsContainer{
                 display: inline-flex;
-                margin-right:.45rem;
+                margin-right:.75rem;
                 font-size: inherit !important;  
                 &>div{
-                    margin-inline-end: -0.45rem; 
+                    margin-inline-end: -0.75rem; 
                 }
             }
             .suitesGraphicContainer{

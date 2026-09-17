@@ -14,9 +14,9 @@ export const Applayout=()=>{
                 {/* #header */}
                 <section className={styles.header}>
                     <div className={styles.coinsContainer}>
-                        <Chip color="blue" zInd={3}/>
-                        <Chip color="green"/>
-                        <Chip color="red" zInd={1}/>
+                        <Chip  color="BLUE" zInd={3}/>
+                        <Chip color="GREEN"/>
+                        <Chip isProtected={true} color="RED" zInd={1}/>
                     </div>
                     <span className="app-title">5Link</span>
                     <div className={styles.suitesGraphicContainer}>

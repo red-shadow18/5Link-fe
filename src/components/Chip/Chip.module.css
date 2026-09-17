@@ -6,7 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px;   
+  padding: 1px;
+  
+
   
   /* Modern casino physical depth shadows */
   box-shadow: 
@@ -18,11 +20,18 @@
   outline-offset: -1px;
   
   /* Standard modern app performance properties */
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 10s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+
+  .lockIcon {
+    position: absolute;
+    top: 0;
+    right: -0.05em;
+    z-index: 10;
+  }
 }
 
-Micro Interactivity Taps
+/* Micro Interactivity Taps */
 .chipParent:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -76,3 +85,23 @@ Micro Interactivity Taps
   );
   pointer-events: none;
 }
+
+   @keyframes :global(dropChip) {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  } }
+
+    @keyframes :global(removeChip) {
+  from {
+     transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  } }

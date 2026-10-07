@@ -1,18 +1,25 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import styles from './AppLayout.module.css'
 import '../global.css'
 import { Chip } from '../components/Chip';
 import { BottomNavigation } from '../components/BottomNavigation';
 
 export const Applayout=()=>{
+    const location=useLocation()
+    console.log(location.pathname)
 
-    const isInsideGame=false; //TODO: check if user is inside a game or not
+   
+    const isInsideGame=location.pathname.includes("/room"); //TODO: check if user is inside a game or not
     
+    const showExitPopup=()=>{
+        console.log("EXIT BUTTON CLICKED")
+    }
     return(
         <div className={styles.desktopWrapper}>
             <main className={styles.mobileFrame}>
                 {/* #header */}
                 <section className={styles.header}>
+                    {isInsideGame &&<button onClick={showExitPopup}>EXIT</button>}
                     <div className={styles.coinsContainer}>
                         <Chip  color="BLUE" zInd={3}/>
                         <Chip color="GREEN"/>

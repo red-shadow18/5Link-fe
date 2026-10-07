@@ -11,10 +11,11 @@ interface BoardCellProps {
 
 export const BoardCell = (props: BoardCellProps) => {
     const { cellState, onCellClick } = props;
-    const { index, cardCode, chipColor, isOccupied, isHighlighted, isProtected, isCorner } = cellState;
+    const { index, cardCode, chipColor, isHighlighted, isProtected, isCorner } = cellState;
     const card:ParsedCardValue= returnCardValue(cardCode);
     const {value,suit,color}=card
 
+    const isOccupied=chipColor !=null;
     const cellClasses = `${styles.cell} ${isHighlighted ? styles.highlighted : ''} ${isOccupied ? styles.occupied : ''} ${isProtected ? styles.protected : ''}`;
     const handleClick = () => {
         if (onCellClick) {

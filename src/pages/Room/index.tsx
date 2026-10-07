@@ -1,7 +1,14 @@
+import { GameArena } from "../../components/GameArena"
+
+
 export const Room=()=>{
+    const isInsideGme=true
     return(
         <div>
-            Room
+            {
+                isInsideGme?<GameArena/>:    <p>Room</p> 
+            }
+       
         </div>
     )
 }   

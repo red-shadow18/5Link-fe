@@ -7,7 +7,6 @@ export interface BoardTileState {
     cardCode: BoardCardCode;
     chipColor: TeamColor | null;
     isCorner:boolean;
-    isOccupied: boolean;
     isHighlighted: boolean;
     isProtected: boolean; // in case its a part of a sequence
 }

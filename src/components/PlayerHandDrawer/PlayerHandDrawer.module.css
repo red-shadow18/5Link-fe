@@ -1,0 +1,58 @@
+.playerHandDrawerContainer{
+    height: 110px;
+    width: 100%;
+    background-color: #ffffff;
+    border-top:1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    padding-bottom: env(safe-area-inset-bottom, 6px);
+    box-sizing:border-box;
+    flex-shrink: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .cardsContainer{
+        display: flex;
+        gap:.25rem;
+        justify-content: center;
+        height: 100%;
+        padding: 10px 0;
+        align-items: center;
+        overflow: hidden;
+
+        .card{
+
+            cursor: pointer;
+            height: 76px;
+            width: 52px;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            flex-shrink: 0;
+            transition: transform 0.5s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+
+            &:active {
+                transform: translateY(-1rem);
+            }
+
+            &.selected {
+                transform: translateY(-1.125rem);
+                border-color: #2563eb;
+                box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
+            }
+
+            svg{
+            height: 76px;
+            width: 52px;
+        }
+    }
+        }
+
+        
+}

@@ -1,7 +1,6 @@
-import { useMemo, useState } from "react";
-import type { BoardState, TeamColor } from "../../types/game";
+import { useMemo } from "react";
+import type { TeamColor } from "../../types/game";
 import styles from "./Board.module.css"
-import { BOARD_LAYOUT } from "../../config/boardLayout";
 import { BoardCell } from "../BoardCell";
 import { useBoardStore } from "../../stores/useBoardStore";
 import { useGameStore } from "../../stores/useGameStore";
@@ -11,12 +10,12 @@ interface BoardProps {
     onSelectCell?: (index: number) => void; // Callback when a cell is selected
 }
 
-const NEXT_CHIP: Record<string, TeamColor | null> = {
-  NONE: 'BLUE',
-  BLUE: 'GREEN',
-  GREEN: 'RED',
-  RED: null,
-};
+// const NEXT_CHIP: Record<string, TeamColor | null> = {
+//   NONE: 'BLUE',
+//   BLUE: 'GREEN',
+//   GREEN: 'RED',
+//   RED: null,
+// };
 
 const getCellCenterPercentage = (index: number): { x: number; y: number } => {
     const row = Math.floor(index / 10);
@@ -24,7 +23,7 @@ const getCellCenterPercentage = (index: number): { x: number; y: number } => {
     return { x: (col + 0.5) * 10, y: (row + 0.5) * 10 };
 };
 export const Board=(props:BoardProps)=>{
-   
+   const {} = props;
 
     const {board, completedSequences, setCellChip} = useBoardStore()
     const {highlightedIndices: gameHighlightedCells, playerTeam, isMyTurn, consumeCard, selectedCard} = useGameStore()

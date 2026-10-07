@@ -41,7 +41,7 @@ const handleSelectCard=(card:CardCode, playerHand:CardCode[], selectedCard:CardC
 
     const currentBoardState = useBoardStore.getState().board;
     const cardData=returnCardValue(card)
-    const {value, isJack,jackType} = cardData;
+    const {isJack,jackType} = cardData;
 
     let allowedIndices:number[]=[];
     if(isJack){

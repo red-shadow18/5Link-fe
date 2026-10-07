@@ -1,5 +1,4 @@
 import type { CardCode } from "../../config/boardLayout"
-import { returnCardValue } from "../../utils/cardUtils";
 import styles from "./PlayerHandDrawer.module.css"
 
 
@@ -18,7 +17,7 @@ return (
         <div className={styles.cardsContainer}>
             {
                 cards.map((code,index)=>{
-                    const {value,suit,color,isJack,jackType} = returnCardValue(code);
+                    //const {value,suit,color,isJack,jackType} = returnCardValue(code);
                     
                     const isSelected = selectedCard === code;
                     const cardClasses=`${styles.card} ${isSelected?styles.selected:''}`

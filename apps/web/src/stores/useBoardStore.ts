@@ -1,7 +1,7 @@
 import { create } from 'zustand';
-import { BOARD_LAYOUT, type BoardCardCode, type CardCode } from "../config/boardLayout";
-import type { BoardTileState, TeamColor } from "../types/game";
 
+import { BOARD_LAYOUT } from '@5link/shared';
+import type { BoardTileState, CardCode, TeamColor, BoardCardCode } from '@5link/shared';
 interface BoardState {
 turnNumber: number;
   board:BoardTileState[];

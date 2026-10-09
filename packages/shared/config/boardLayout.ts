@@ -34,6 +34,3 @@ export const BOARD_LAYOUT: readonly string[] = [
   'CORNER', 'AD',  'KD',  'QD',  '10D', '9D',  '8D',  '7D',  '6D',  'CORNER',
 ] as const;
 
-export type BoardCardCode = (typeof BOARD_LAYOUT)[number];
-export type JackCardCode = 'JH' | 'JS' | 'JC' | 'JD';
-export type CardCode = Exclude<BoardCardCode, 'CORNER'> | JackCardCode;

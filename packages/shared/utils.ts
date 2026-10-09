@@ -1,12 +1,6 @@
-import type { BoardCardCode, JackCardCode } from "../config/boardLayout";
+import type { BoardCardCode, CardColor, CardSuit, JackCardCode, JackType, ParsedCardValue,SuitValue,  } from "./types";
 
-export type CardSuit = 'S' | 'H' | 'D' | 'C' | '';
 
-export type SuitValue= '♠' | '♥' | '♦' | '♣' | '';
-
-export type CardColor= 'red' | 'black' | '';
-
-type  JackType = 'ONE_EYED' | 'TWO_EYED' | undefined;
 
 const ONE_EYED_JACKS:JackCardCode[]=['JS','JH'];
 
@@ -17,16 +11,7 @@ const suitData : Record<Exclude<CardSuit, ''>, { symbol: SuitValue; color: CardC
     C: { symbol: '♣', color: 'black' }
   };
 
-export interface ParsedCardValue {
-    cardCode:BoardCardCode;
-    value:string;
-    suitCode:CardSuit;
-    suit:SuitValue;
-    color: CardColor;
-    isCorner:boolean;
-    isJack:boolean;
-    jackType?: JackType;
-}
+
 
 const returnCardValue = (cardCode: BoardCardCode):ParsedCardValue => {
     if(cardCode=='CORNER'){

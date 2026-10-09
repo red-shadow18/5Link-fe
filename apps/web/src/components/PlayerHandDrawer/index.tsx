@@ -1,4 +1,4 @@
-import type { CardCode } from "../../config/boardLayout"
+import type { CardCode } from '@5link/shared';
 import styles from "./PlayerHandDrawer.module.css"
 
 

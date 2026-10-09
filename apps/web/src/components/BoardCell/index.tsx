@@ -1,7 +1,8 @@
-import type { BoardTileState } from "../../types/game";
-import { returnCardValue, type ParsedCardValue } from "../../utils/cardUtils";
+import type { BoardTileState } from '@5link/shared';
+import { returnCardValue, } from "@5link/shared";
+import  type {ParsedCardValue} from "@5link/shared";
 import styles from "./BoardCell.module.css";
-import CornerCellImage from "../../../src/assets/cornerCell.svg";
+import CornerCellImage from "../../assets/cornerCell.svg";
 import { Chip } from "../Chip";
 
 interface BoardCellProps {

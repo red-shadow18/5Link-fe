@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { TeamColor } from "../../types/game";
+import type { TeamColor } from '@5link/shared';
 import styles from "./Board.module.css"
 import { BoardCell } from "../BoardCell";
 import { useBoardStore } from "../../stores/useBoardStore";

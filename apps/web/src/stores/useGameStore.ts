@@ -1,7 +1,6 @@
 import { create } from "zustand";
-import type { CardCode } from "../config/boardLayout";
-import type { TeamColor } from "../types/game";
-import { returnCardValue } from "../utils/cardUtils";
+import type { CardCode, TeamColor } from '@5link/shared';
+import { returnCardValue } from "@5link/shared";
 import { useBoardStore } from "./useBoardStore";
 
 interface PlayerDetails {

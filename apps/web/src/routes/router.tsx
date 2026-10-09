@@ -5,6 +5,7 @@ import { Room } from "../pages/Room";
 import { Rankings } from "../pages/Rankings";
 import { Rules } from "../pages/Rules";
 import { Stats } from "../pages/Stats";
+import NotFound from "../pages/NotFound";
 
 
 export const router = createBrowserRouter([
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: "stats",
                 element: <Stats />
+            },
+            {
+                path: "*",
+                element: <NotFound />
             }
         ]   
     }

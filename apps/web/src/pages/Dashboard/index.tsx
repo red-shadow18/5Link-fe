@@ -8,7 +8,7 @@ export const Dashboard=()=>{
     }
     return(
         <div>
-        <button onClick={handleTakeInsideGame}>Start game</button>
+        <button onClick={handleTakeInsideGame}>Start new game</button>
         </div>
     )
 }

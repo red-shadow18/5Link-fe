@@ -1,0 +1,21 @@
+1. set up a vite project with react and typescript
+2. ditching tailwind and using css for styling
+3. added a logo.svg file in the public folder and set it as the favicon in index.html
+4. Define board matrix
+5. Add react router and set up the navigation
+6. create app layout with header, content and footer
+7. build the game board
+add logic to render number on the board
+8. build the hand drawer
+9. adding the game store
+src/store/
+├── useBoardStore.ts  # Public 10x10 matrix, chip placements, sequence locks
+└── useGameStore.ts   # Player session, hand, active turn, selected card
+10. complete the player hand logic
+11. add the sequence lock messge catching and displaying it in the UI
+12. converted projecty to a monorepo and moved shared types and utils to a separate package
+13. added supportedArchitectures in package.json
+14. added redirects file in apps/web/public
+15. added type check in git hub actions, disabled auto trigger by adding netlify.toml file and disabled auto build in netlify dashboard. created a build hook and added that as a workflow step.
+16. addedrule to protect merge to develop and main on type check failure.
+17. Package directory updated in netlify dashboard an renoved the step log from gitignore..

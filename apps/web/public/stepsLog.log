@@ -18,4 +18,4 @@ src/store/
 14. added redirects file in apps/web/public
 15. added type check in git hub actions, disabled auto trigger by adding netlify.toml file and disabled auto build in netlify dashboard. created a build hook and added that as a workflow step.
 16. addedrule to protect merge to develop and main on type check failure.
-17. Package directory updated in netlify dashboard an renoved the step log from gitignore..
+17. Package directory updated in netlify dashboard an renoved the step log from gitignore.. =>[build] ignore = "exit 0". This disabled generate build preview that is auto done as a linkage bw github and netlify. whenever a pr is raised it starts checking whats new and generates a build preview. This is not needed as we are doing type check in github actions and then triggering the build hook to generate the build preview. This is done to avoid unnecessary builds and to save time and resources.
